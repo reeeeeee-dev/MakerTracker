@@ -19,5 +19,10 @@
         >
       </p>
     </div>
+    <div class="contact-link">
+      <a [routerLink]="['/contact']" [queryParams]="{ page: router.url }" mat-button>
+        Contact Us
+      </a>
+    </div>
   </div>
 </div>

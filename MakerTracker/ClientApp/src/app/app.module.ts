@@ -19,12 +19,14 @@ import { MenuComponent } from './menu/menu.component';
 import { InitProfileComponent } from './Profiles/init-profile/init-profile.component';
 import { UpdateProfileComponent } from './Profiles/update-profile/update-profile.component';
 import { AuthService } from './services/auth/auth.service';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomeComponent,
+    ContactComponent,
     DashboardComponent,
     FooterNavComponent,
     DashboardComponent,
@@ -37,7 +39,16 @@ import { AuthService } from './services/auth/auth.service';
     FormsModule,
     MakerComponentsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { 
+        path: '',
+        component: HomeComponent,
+        pathMatch: 'full'
+      },
+      { 
+        path: 'contact',
+        component: ContactComponent,
+        pathMatch: 'full' 
+      },
       {
         path: 'dashboard',
         component: DashboardComponent,
